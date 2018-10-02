@@ -1,12 +1,8 @@
 body {
-  background: #283583;
-  color: #ffffff;
   font-family: "ff-tisa-sans-web-pro";
   font-size: 18px;
-  height: 100vh;
   margin: 0;
   padding: 0;
-  width: 100vw;
 }
 h1 {
   font-size: 2.5em;
@@ -18,14 +14,67 @@ h1 strong {
 }
 .menu li a {
   color: white;
-  font-size: 1.35em;
+  font-size: 1.25em;
+  font-weight: 500;
+  opacity: 0.54;
+  transition: 0.1s all linear;
+}
+.menu li a:hover {
+  opacity: 0.87;
 }
 .top-bar {
   background: #283583;
+  left: 0;
+  margin: 0 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+.top-bar-title img {
+  box-sizing: content-box;
+  padding: 11.2px 16px;
+}
+.top-bar-title img:hover {
+  cursor: pointer;
 }
 .top-bar ul {
   background: inherit;
 }
 .top-bar-title img {
   height: 3.5em;
+}
+.site-cover {
+  background: #283583;
+  color: #ffffff;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+ .site-cover .ignore-topbar {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 117.38px;
+}
+.vertical-center {
+  align-items: center;
+  display: flex;
+}
+.scroll-button {
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
+  margin: 0 auto;
+  opacity: 0.54;
+  padding: 18px 16px 12px 16px;
+  transition: 0.1s all linear;
+}
+.scroll-button span {
+  display: block;
+}
+.scroll-button:hover {
+  opacity: 0.87;
 }
