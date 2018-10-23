@@ -1,30 +1,47 @@
-* {
-  font-family: "ff-tisa-sans-web-pro" !important;
-}
+.mdc-typography--headline1,
 .mdc-typography--headline2,
 .mdc-typography--headline3,
 .mdc-typography--headline4,
 .mdc-typography--headline5,
 .mdc-typography--headline6 {
   color: #283583;
+  font-family: "ff-tisa-sans-web-pro";
   font-weight: 900;
 }
+.mdc-typography--body1,
+.mdc-typography--body2 {
+  font-family: "ff-tisa-sans-web-pro";
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "ff-tisa-sans-web-pro";
+  opacity: 0.54;
+  transition: 0.1s all linear;
+}
+button:hover {
+  opacity: 0.87;
+}
+.mdc-layout-grid {
+  margin-top: 80px;
+}
 .mdc-top-app-bar {
+  background: #fff;
   box-shadow: rgba(0, 0, 0, 0.17) 0 0 2px 0;
-  position: absolute;
+  position: fixed;
   top: 0;
 }
 .mdc-top-app-bar__row {
-  background: #fff;
-  height: 96px;
+  height: 80px;
 }
 .mdc-top-app-bar__title {
-  color: #000;
-  color: rgba(0, 0, 0, 0.87);
+  /* overflow: visible; */
 }
 .nav-item {
   color: #000;
   color: rgba(0, 0, 0, 0.38);
+  font-family: "ff-tisa-sans-web-pro";
   font-size: 1.125em;
   font-weight: 500;
   padding: 12px;
@@ -41,15 +58,44 @@
 }
 .nav-item__active::after {
   border-bottom: 4px solid #ed1845;
-  bottom: -26px;
+  bottom: -18px;
   content: '';
   left: 12px;
   opacity: 0.6;
   position: absolute;
   width: calc(100% - 24px);
 }
-.mdc-layout-grid {
-  margin-top: 96px;
+.banner {
+  background: #283583;
+  height: 100vh;
+  -webkit-animation: colorchange 50s;
+}
+.banner .mdc-top-app-bar {
+  background-color: inherit;
+  box-shadow: none;
+  position: relative;
+}
+.banner .mdc-top-app-bar__row {
+  height: 124px;
+}
+.banner .mdc-top-app-bar .nav-item {
+  color: #eee;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.35em;
+}
+.banner .mdc-top-app-bar .nav-item:hover {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.87);
+}
+.intro-headline {
+  color: #fff;
+  line-height: 1.5em;
+}
+.intro-headline strong {
+  color: #edb7c2;
+}
+.banner .mdc-layout-grid {
+  margin-top: 0;
 }
 .lead-paragraph {
   color: #000;
@@ -57,8 +103,22 @@
   font-size: 1.125rem;
   line-height: 2rem;
 }
+.scroll-button {
+  color: #fff;
+  display: block;
+  font-size: 1.35em;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 18px 16px 12px 16px;
+}
+.scroll-button span {
+  display: block;
+}
 @media (min-width: 840px) {
-  .mdc-layout-grid {
+.layout-grid-narrow {
     width: 660px;
+  }
+.grid__cell--offset2 {
+    grid-column-start: 2;
   }
 }

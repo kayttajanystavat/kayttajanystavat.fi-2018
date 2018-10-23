@@ -5,55 +5,44 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Käyttäjän ystävät ry</title>
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/qqq8gfx.css">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <body class="mdc-typography">
-    <header class="mdc-top-app-bar">
-      <div class="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
-          <span class="mdc-top-app-bar__title">Käyttäjän ystävät</span>
-        </section>
-        <nav class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-          <a href="#" class="nav-item nav-item__active">Meistä</a>
-          <a href="#" class="nav-item">Tapahtumat</a>
-          <a href="#" class="nav-item">Liity</a>
-          <a href="#" class="nav-item">Yhteystiedot</a>
-        </nav>
+    <section class="banner">
+      <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <a class="mdc-top-app-bar__title" href="#">
+              <img src="img/kay-white_vector.svg" alt="" height="64">
+            </a>
+          </section>
+          <nav class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            <a href="about.html" class="nav-item">Meistä</a>
+            <a href="#" class="nav-item">Tapahtumat</a>
+            <a href="#" class="nav-item">Liity</a>
+            <a href="#" class="nav-item">Ota yhteyttä</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdc-layout-grid">
+        <main class="mdc-layout-grid__inner">
+          <article id="intro" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9 grid__cell--offset2" aria-labelledby="intro-heading">
+            <h1 id="intro-heading" class="mdc-typography--headline3 intro-headline">
+              Olemme <strong>käytettävyydestä</strong>,
+              <strong>käyttäjäkokemuksesta</strong> ja
+              <strong>palvelumuotoilusta</strong>
+              kiinnostuneiden poikkitieteellinen yhdistys.
+            </h1>
+            <button aria-label="Skrollaa alaspäin seuraavaan sisältöön" title="Skrollaa seuraavaan sisältöön" class="scroll-button" type="button" name="button">
+              <span>Skrollaa alas</span>
+              <i class="material-icons" aria-hidden="true">expand_more</i>
+            </button>
+          </article>
+        </main>
       </div>
-    </header>
-    <div class="mdc-layout-grid">
-      <main class="mdc-layout-grid__inner">
-        <section id="about" class="mdc-layout-grid__cell--span-12" aria-labelledby="about-header">
-          <h2 id="about-header" class="mdc-typography--headline2">Meistä</h2>
-          <p class="mdc-typography--body1 lead-paragraph">
-            Käyttäjän ystävät ry on perustettu vuonna 2001 Käyttettävyyskoulun
-            opiskelijoiden opiskelijayhdistykseksi. Yhdistys kokoaa yhteen
-            käytettävyydestä, UI- ja UX-suunnittelusta sekä palvelumuotoilusta
-            kiinnostuneita ihmisiä.
-          </p>
-          <img src="img/PC040806_rajattu.jpg" width="100%" alt="Käyttäjän ystävien jäseniä ideoimassa työpöydän äärellä Columbia Road -ekskursiolla.">
-          <p class="mdc-typography--body1">
-            Käyttäjän ystävät järjestää erilaisia avoimia tapahtumia alan
-            opiskelijoille ja nuorille ammattilaisille. Suosituimpia ovat
-            ekskursiot eli yritysvierailut alan yrityksiin. Vierailuilla
-            tutustutaan palvelumuotoiluun, käyttöliittymäsuunnitteluun ja
-            käyttäjätutkimuksiin ja ne ovat loistava tilaisuus kuulla alasta
-            sen ammattilaisilta ja verkostoitua.
-          <p class="mdc-typography--body1">
-            Suurin osa jäsenistämme on
-            Helsingin yliopiston, Aalto-yliopiston tai Metropolia Ammattikorkeakoulun
-            opiskelijoita tai jo valmistuneita, mutta kaikki alasta kiinnostuneet ovat
-            tervetulleita jäseneksemme.
-          </p>
-          </p>
-        </section>
-      </main>
-    </div>
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js" type="text/javascript">
-
-    </script>
+    </section>
   </body>
 </html>
