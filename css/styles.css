@@ -28,15 +28,12 @@ button:hover {
 }
 .mdc-top-app-bar {
   background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.17) 0 0 2px 0;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.16);
   position: fixed;
   top: 0;
 }
 .mdc-top-app-bar__row {
   height: 80px;
-}
-.mdc-top-app-bar__title {
-  /* overflow: visible; */
 }
 .nav-item {
   color: #000;
@@ -67,8 +64,6 @@ button:hover {
 }
 .banner {
   background: #283583;
-  height: 100vh;
-  -webkit-animation: colorchange 50s;
 }
 .banner .mdc-top-app-bar {
   background-color: inherit;
@@ -95,6 +90,7 @@ button:hover {
   color: #edb7c2;
 }
 .banner .mdc-layout-grid {
+  height: 100vh;
   margin-top: 0;
 }
 .lead-paragraph {
@@ -114,11 +110,33 @@ button:hover {
 .scroll-button span {
   display: block;
 }
-@media (min-width: 840px) {
-.layout-grid-narrow {
-    width: 660px;
+@media (max-width: 1024px) {
+.mdc-layout-grid__cell--span-8-small-tablet {
+    grid-column-end: span 8;
   }
+}
+@media (min-width: 840px) {
 .grid__cell--offset2 {
     grid-column-start: 2;
   }
+.grid__cell--offset4 {
+    grid-column-start: 4;
+  }
+}
+@media (max-width: 719px) {
+.mdc-top-app-bar__section--align-end {
+    display: none;
+  }
+}
+
+
+
+.mdc-top-app-bar__title {
+    line-height: 0;
+    padding-left: 20px;
+    padding-right: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
 }
