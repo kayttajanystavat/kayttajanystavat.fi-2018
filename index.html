@@ -3,52 +3,85 @@
   <head>
     <meta charset="UTF-8" lang="fi">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Käyttäjän ystävät ry</title>
+    <title>Etusivu | Käyttäjän ystävät ry</title>
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/qqq8gfx.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" type="text/css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <body class="mdc-typography">
-    <section class="banner">
-      <header class="mdc-top-app-bar">
-        <div class="mdc-top-app-bar__row">
-          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-            <a class="mdc-top-app-bar__title" href="#">
-              <img src="img/kay-white_vector.svg" alt="" height="64">
-            </a>
-          </section>
-          <nav class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-            <a href="about.html" class="nav-item">Meistä</a>
-            <a href="#" class="nav-item">Tapahtumat</a>
-            <a href="#" class="nav-item">Liity</a>
-            <a href="#" class="nav-item">Ota yhteyttä</a>
-          </nav>
-        </div>
-      </header>
-      <div class="mdc-layout-grid">
-        <main class="mdc-layout-grid__inner">
-          <article id="intro" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9 grid__cell--offset2" aria-labelledby="intro-heading">
-            <h1 id="intro-heading" class="mdc-typography--headline3 intro-headline">
-              Olemme <strong>käytettävyydestä</strong>,
-              <strong>käyttäjäkokemuksesta</strong> ja
-              <strong>palvelumuotoilusta</strong>
-              kiinnostuneiden poikkitieteellinen yhdistys.
-            </h1>
-            <button aria-label="Skrollaa alaspäin seuraavaan sisältöön" title="Skrollaa seuraavaan sisältöön" class="scroll-button" type="button" name="button">
-              <span>Skrollaa alas</span>
-              <i class="material-icons" aria-hidden="true">expand_more</i>
-            </button>
-          </article>
-        </main>
+    <header class="top-bar frontpage-top-bar">
+      <a href="index.html" class="top-bar-logo">
+        <img src="img/kay-white_vector.svg" alt="Käyttäjän ystävät ry">
+      </a>
+      <nav class="top-bar-nav">
+        <!-- <a href="about.html" class="mdc-button">Meistä</a> -->
+        <a href="events.html" class="mdc-button">Tapahtumat</a>
+        <a href="join.html" class="mdc-button">Liity</a>
+        <a href="contact.html" class="mdc-button">Ota yhteyttä</a>
+      </nav>
+      <button class="mdc-button menu-button">Valikko</button>
+    </header>
+    <section class="frontpage-header">
+      <div class="grid-container">
+        <article class="frontpage-header-column">
+          <h1 class="frontpage-headline">
+            Olemme <strong>käytettävyydestä</strong>,
+            <strong>käyttäjäkokemuksesta</strong> ja
+            <strong>palvelumuotoilusta</strong>
+            kiinnostuneiden poikkitieteellinen yhdistys.
+          </h1>
+          <button onClick="document.getElementById('about-section').scrollIntoView({behavior: 'smooth', block: 'start'});" aria-label="Skrollaa alaspäin seuraavaan sisältöön" title="Skrollaa seuraavaan sisältöön" class="scroll-button mdc-button" type="button" name="button">
+            <span>Tutustu meihin</span>
+            <i class="material-icons" aria-hidden="true">expand_more</i>
+          </button>
+        </article>
       </div>
     </section>
-    <script src="js/inview.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript">
-
-    </script>
+    <div class="wrapper">
+      <main class="grid-container">
+        <section id="about-section" class="row" aria-labelledby="about-headline">
+          <h2 id="about-headline" class="mdc-typography--headline2">Meistä</h2>
+          <p class="mdc-typography--body1 intro-paragraph">
+            Käyttäjän ystävät ry on perustettu vuonna 2001 Käyttettävyyskoulun
+            opiskelijoiden opiskelijayhdistykseksi. Yhdistys kokoaa yhteen
+            käytettävyydestä, UI- ja UX-suunnittelusta sekä palvelumuotoilusta
+            kiinnostuneita ihmisiä.
+          </p>
+          <img src="img/PC040806_rajattu.jpg" width="100%" alt="Käyttäjän ystävien jäseniä ideoimassa työpöydän äärellä Columbia Road -ekskursiolla.">
+          <p class="mdc-typography--body1">
+            Käyttäjän ystävät järjestää erilaisia avoimia tapahtumia alan
+            opiskelijoille ja nuorille ammattilaisille. Suosituimpia ovat
+            ekskursiot eli yritysvierailut alan yrityksiin. Vierailuilla
+            tutustutaan palvelumuotoiluun, käyttöliittymäsuunnitteluun ja
+            käyttäjätutkimuksiin ja ne ovat loistava tilaisuus kuulla alasta
+            sen ammattilaisilta ja verkostoitua.
+          </p>
+          <p class="mdc-typography--body1">
+            Suurin osa jäsenistämme on
+            Helsingin yliopiston, Aalto-yliopiston tai Metropolia Ammattikorkeakoulun
+            opiskelijoita tai jo valmistuneita, mutta kaikki alasta kiinnostuneet ovat
+            tervetulleita jäseneksemme.
+          </p>
+        </section>
+      </main>
+      <footer class="main-footer grid-container">
+        <section class="row" style="background:#F7F8FA; padding-bottom:24px;">
+          <h4 class="mdc-typography--headline4">Ryhdy Käyttäjän ystäväksi</h4>
+          <p class="mdc-typography--body1">Liittymällä jäseneksemme saat helposti tiedon KäYn tulevista tapahtumista ja mm. alan työtarjouksista!</p>
+          <button class="mdc-fab mdc-fab--extended">
+            <span class="mdc-fab__label">Liity jäseneksi</span>
+          </button>
+        </section>
+        <section class="main-footer-bottom row">
+          <i class="mdc-typography--body1" style="padding: 12px">icon</i>
+          <i class="mdc-typography--body1" style="padding: 12px">icon</i>
+          <i class="mdc-typography--body1" style="padding: 12px">icon</i>
+          <i class="mdc-typography--body1" style="padding: 12px">icon</i>
+          <p class="mdc-typography--body1" style="color:rgb(0,0,0,0.57)"><i>Käyttäjän ystävät ry 2018 &reg;</i></p>
+        </section>
+      </footer>
+    </div>
   </body>
 </html>

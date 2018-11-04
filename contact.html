@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="https://use.typekit.net/qqq8gfx.css">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" type="text/css">
-    <link rel="stylesheet" href="css/styles_new.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <body class="mdc-typography">
-    <header class="page-top-bar">
-      <a href="index.html">
-        <img src="img/kay-white_vector.svg" alt="Käyttäjän ystävät ry" height="64">
+    <header class="top-bar page-top-bar">
+      <a href="index.html" class="top-bar-logo">
+        <img src="img/kay-white_vector.svg" alt="Käyttäjän ystävät ry" height="52">
       </a>
-      <nav class="page-top-bar-nav">
-        <a href="about.html">Meistä</a>
-        <a href="events.html">Tapahtumat</a>
-        <a href="join.html">Liity</a>
-        <a href="contact.html">Ota yhteyttä</a>
+      <nav class="top-bar-nav">
+        <!-- <a href="about.html" class="mdc-button">Meistä</a> -->
+        <a href="events.html" class="mdc-button">Tapahtumat</a>
+        <a href="join.html" class="mdc-button">Liity</a>
+        <a href="contact.html" class="mdc-button">Ota yhteyttä</a>
       </nav>
       <button class="mdc-button menu-button">Valikko</button>
     </header>
@@ -26,18 +26,16 @@
       <main class="grid-container">
         <section class="row">
           <h3 class="mdc-typography--headline3">Ota yhteyttä</h3>
-          
+          <ul>
+            <li><a href="mailto:hallitus@kayttajanystavat.fi">hallitus@kayttajanystavat.fi</a></li>
+            <li>c/o Aalto-yliopiston ylioppilaskunta, PL 69, 02151 Espoo</li>
+            <li>Yhdistysnumero: 183.750</li>
+            <li>Y-tunnus: 1741700-5</li>
+          </ul>
         </section>
       </main>
       <footer class="main-footer grid-container">
-        <section class="row">
-          <h4 class="mdc-typography--headline4">Ryhdy Käyttäjän ystäväksi</h4>
-          <p class="mdc-typography--body1">Liittymällä jäseneksemme saat helposti tiedon KäYn tulevista tapahtumista ja mm. alan työtarjouksista!</p>
-          <button class="mdc-fab mdc-fab--extended">
-            <span class="mdc-fab__label">Liity jäseneksi</span>
-          </button>
-        </section>
-        <section class="main-footer-bottom rpw">
+        <section class="main-footer-bottom row">
           <i class="mdc-typography--body1" style="padding: 12px">icon</i>
           <i class="mdc-typography--body1" style="padding: 12px">icon</i>
           <i class="mdc-typography--body1" style="padding: 12px">icon</i>
