@@ -25,10 +25,10 @@
       </nav>
       <button class="mdc-button menu-button">Valikko</button>
     </header>
-    <section class="frontpage-header">
+    <div class="frontpage-header">
       <div class="grid-container">
-        <article class="frontpage-header-column">
-          <h1 class="frontpage-headline">
+        <section class="frontpage-header-column" aria-labelledby="frontpage-top-headline">
+          <h1 id="frontpage-top-headline" class="frontpage-headline">
             Olemme <strong>käytettävyydestä</strong>,
             <strong>käyttäjäkokemuksesta</strong> ja
             <strong>palvelumuotoilusta</strong>
@@ -38,9 +38,9 @@
             <span>Tutustu meihin</span>
             <i class="material-icons" aria-hidden="true">expand_more</i>
           </button>
-        </article>
+        </section>
       </div>
-    </section>
+    </div>
     <div class="wrapper">
       <main class="grid-container">
         <section id="about-section" class="row" aria-labelledby="about-headline">
@@ -68,7 +68,7 @@
           </p>
         </section>
         <section class="row frontpage-bottom-section" aria-labelledby="frontpage-bottom-section-headline">
-          <h4 id="frontpage-bottom-section-headline" class="mdc-typography--headline4">Ryhdy Käyttäjän ystäväksi</h4>
+          <h3 id="frontpage-bottom-section-headline" class="mdc-typography--headline4">Ryhdy Käyttäjän ystäväksi</h3>
           <p class="mdc-typography--body1">Liittymällä jäseneksemme saat helposti tiedon KäYn tulevista tapahtumista ja mm. alan työtarjouksista!</p>
           <a href="join.html" class="mdc-fab mdc-fab--extended">
             <span class="mdc-fab__label">Liity jäseneksi</span>
