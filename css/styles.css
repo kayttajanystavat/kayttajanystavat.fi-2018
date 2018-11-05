@@ -11,7 +11,7 @@
   padding: 24px;
   width: 720px;
 }
-.row {
+.col-12 {
   grid-column: 1 / -1;
 }
 main {
@@ -35,7 +35,6 @@ a {
   font-weight: bold;
   opacity: 1;
 }
-
 a:active {
   color: #EC5878;
 }
@@ -92,6 +91,13 @@ ul li {
 .scroll-button:hover {
   opacity: 0.87;
 }
+/* IMAGES */
+figure {
+  margin: 16px 0;
+}
+figcaption {
+  font-family: "ff-tisa-sans-web-pro";
+}
 /* PAGE TOP BAR */
 .top-bar {
   align-items: center;
@@ -126,7 +132,6 @@ ul li {
   padding: 12px;
   text-decoration: none;
   text-transform: none;
-  te
 }
 .top-bar-nav a:hover {
   opacity: 0.87;
@@ -181,6 +186,36 @@ ul li {
 .frontpage-bottom-section .mdc-fab {
   margin-bottom: 48px;
 }
+/* BOARD MEMBERS */
+.board-persons-section {
+  padding-bottom: 24px;
+}
+.board-person {
+  grid-column: span 4;
+}
+.board-person span {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "ff-tisa-sans-web-pro";
+  font-size: 1.115rem;
+  line-height: 1.5rem;
+}
+.board-person span:nth-of-type(2) {
+  font-size: 1.25rem;
+}
+.board-person {
+  grid-column: span 4;
+}
+.board-person.past span {
+  color: rgba(0, 0, 0, 0.60);
+  font-family: "ff-tisa-sans-web-pro";
+  font-size: 0.885rem;
+}
+.board-person.past span:nth-of-type(2) {
+  font-size: 1rem;
+}
+.board-group-img {
+  width: 100%;
+}
 /* FOOTER */
 .main-footer {
   align-items: center;
@@ -203,7 +238,7 @@ ul li {
 }
 .footer-signature i {
   color: #000;
-  color: rgba(0,0,0,0.60);
+  color: rgba(0,0,0,0.87);
 }
 /* MEDIA RULES */
 @media only screen and (max-width: 959px) {
