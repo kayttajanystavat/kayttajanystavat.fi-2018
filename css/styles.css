@@ -14,6 +14,9 @@
 .row {
   grid-column: 1 / -1;
 }
+main {
+  min-height: calc(100vh - 196px);
+}
 /* TYPOGRAPHY */
 .mdc-typography--headline2,
 .mdc-typography--headline3,
@@ -27,7 +30,14 @@
   font-family: "ff-tisa-sans-web-pro";
 }
 a {
+  color: #4E67FF;
   font-family: "ff-tisa-sans-web-pro";
+  font-weight: bold;
+  opacity: 1;
+}
+
+a:active {
+  color: #EC5878;
 }
 .intro-paragraph	{
   color: #000;
@@ -40,10 +50,12 @@ ul {
   padding: 0;
 }
 ul li {
+  color: #000;
+  color: rgba(0, 0, 0, 0.87);
   font-family: "ff-tisa-sans-web-pro";
-  font-size: 1.115rem;
+  line-height: 1.5rem;
   list-style: none;
-  margin: 16px 0;
+  margin: 12px 0;
 }
 /* BUTTONS */
 .mdc-button {
@@ -244,5 +256,20 @@ ul li {
   }
   .frontpage-headline {
     font-size: 2rem;
+  }
+}
+
+
+
+.app-fab--absolute {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media(min-width: 1024px) {
+   .app-fab--absolute {
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
 }
