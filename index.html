@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="https://use.typekit.net/qqq8gfx.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/material-components.min.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
@@ -23,18 +24,34 @@
         <a href="join.html" class="mdc-button">Liity</a>
         <a href="contact.html" class="mdc-button">Ota yhteyttä</a>
       </nav>
-      <button class="mdc-button menu-button">Valikko</button>
+      <button class="mdc-button menu-button" onclick="openMenu()">Valikko</button>
     </header>
+    <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+      <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+        <li class="mdc-list-item" role="menuitem">
+          <a href="board.html" class="mdc-list-item__text">Hallitus</a>
+        </li>
+        <li class="mdc-list-item" role="menuitem">
+          <a href="events.html" class="mdc-list-item__text">Tapahtumat</a>
+        </li>
+        <li class="mdc-list-item" role="menuitem">
+          <a href="join.html" class="mdc-list-item__text">Liity</a>
+        </li>
+        <li class="mdc-list-item" role="menuitem">
+          <a href="contact.html" class="mdc-list-item__text">Ota yhteyttä</a>
+        </li>
+      </ul>
+    </div>
     <div class="frontpage-header">
       <div class="grid-container">
-        <section class="frontpage-header-column" aria-labelledby="frontpage-top-headline">
+        <section class="frontpage-header-column" aria-labelledby="frontpage-top-headline" data-aos="fade" data-aos-easing="ease-out" data-aos-duration="600" data-aos-delay="100">
           <h1 id="frontpage-top-headline" class="frontpage-headline">
             Olemme <strong>käytettävyydestä</strong>,
             <strong>käyttäjäkokemuksesta</strong> ja
             <strong>palvelumuotoilusta</strong>
             kiinnostuneiden poikkitieteellinen yhdistys.
           </h1>
-          <button onClick="document.getElementById('about-section').scrollIntoView({behavior: 'smooth', block: 'start'});" aria-label="Skrollaa alaspäin seuraavaan sisältöön" title="Skrollaa seuraavaan sisältöön" class="scroll-button mdc-button" type="button" name="button">
+          <button onClick="document.getElementById('about-section').scrollIntoView({behavior: 'smooth', block: 'start'});" aria-label="Skrollaa alaspäin seuraavaan sisältöön" title="Skrollaa seuraavaan sisältöön" class="scroll-button mdc-button" type="button" name="button" data-aos="fade" data-aos-easing="ease-out" data-aos-duration="600" data-aos-delay="200">
             <span>Tutustu meihin</span>
             <i class="fas fa-angle-down"></i>
           </button>
@@ -43,16 +60,16 @@
     </div>
     <div class="wrapper">
       <main class="grid-container">
-        <section id="about-section" class="col-12" aria-labelledby="about-headline">
-          <h2 id="about-headline" class="mdc-typography--headline2">Meistä</h2>
-          <p class="mdc-typography--body1 intro-paragraph">
+        <section id="about-section" class="col-12">
+          <h2 id="about-headline" class="mdc-typography--headline2" aria-labelledby="about-headline" >Meistä</h2>
+          <p class="mdc-typography--body1 intro-paragraph" aria-labelledby="about-headline" >
             Käyttäjän ystävät ry on perustettu vuonna 2001 Käyttettävyyskoulun
             opiskelijoiden opiskelijayhdistykseksi. Yhdistys kokoaa yhteen
             käytettävyydestä, UI- ja UX-suunnittelusta sekä palvelumuotoilusta
             kiinnostuneita ihmisiä.
           </p>
-          <img src="img/PC040806_rajattu.jpg" width="100%" alt="Käyttäjän ystävien jäseniä ideoimassa työpöydän äärellä Columbia Road -ekskursiolla.">
-          <p class="mdc-typography--body1">
+          <img src="img/PC040806_rajattu.jpg" width="100%" alt="Käyttäjän ystävien jäseniä ideoimassa työpöydän äärellä Columbia Road -ekskursiolla."aria-labelledby="about-headline" >
+          <p class="mdc-typography--body1" aria-labelledby="about-headline" >
             Käyttäjän ystävät järjestää erilaisia avoimia tapahtumia alan
             opiskelijoille ja nuorille ammattilaisille. Suosituimpia ovat
             ekskursiot eli yritysvierailut alan yrityksiin. Vierailuilla
@@ -60,7 +77,7 @@
             käyttäjätutkimuksiin ja ne ovat loistava tilaisuus kuulla alasta
             sen ammattilaisilta ja verkostoitua.
           </p>
-          <p class="mdc-typography--body1">
+          <p class="mdc-typography--body1" aria-labelledby="about-headline" >
             Suurin osa jäsenistämme on
             Helsingin yliopiston, Aalto-yliopiston tai Metropolia Ammattikorkeakoulun
             opiskelijoita tai jo valmistuneita, mutta kaikki alasta kiinnostuneet ovat
@@ -85,8 +102,13 @@
       </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">
+      AOS.init();
 
+      function openMenu() {
+        $('.mdc-menu').fadeToggle( 150, "linear" );
+      }
     </script>
   </body>
 </html>
