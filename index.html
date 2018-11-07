@@ -25,23 +25,15 @@
         <a href="contact.html" class="mdc-button">Ota yhteyttä</a>
       </nav>
       <button class="mdc-button menu-button" onclick="openMenu()">Valikko</button>
+      <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+        <div class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+          <a href="board.html" class="mdc-list-item" role="menuitem">Hallitus</a>
+          <a href="events.html" class="mdc-list-item" role="menuitem">Tapahtumat</a>
+          <a href="join.html"class="mdc-list-item" role="menuitem">Liity</a>
+          <a href="contact.html" class="mdc-list-item" role="menuitem">Ota yhteyttä</a>
+        </div>
+      </div>
     </header>
-    <div class="mdc-menu mdc-menu-surface" tabindex="-1">
-      <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-        <li class="mdc-list-item" role="menuitem">
-          <a href="board.html" class="mdc-list-item__text">Hallitus</a>
-        </li>
-        <li class="mdc-list-item" role="menuitem">
-          <a href="events.html" class="mdc-list-item__text">Tapahtumat</a>
-        </li>
-        <li class="mdc-list-item" role="menuitem">
-          <a href="join.html" class="mdc-list-item__text">Liity</a>
-        </li>
-        <li class="mdc-list-item" role="menuitem">
-          <a href="contact.html" class="mdc-list-item__text">Ota yhteyttä</a>
-        </li>
-      </ul>
-    </div>
     <div class="frontpage-header">
       <div class="grid-container">
         <section class="frontpage-header-column" aria-labelledby="frontpage-top-headline" data-aos="fade" data-aos-easing="ease-out" data-aos-duration="600" data-aos-delay="100">
@@ -107,8 +99,24 @@
     <script type="text/javascript">
       AOS.init();
 
+      var menuBtn = $('.menu-button');
+
+      $(document).ready(function() {
+        $( window ).resize(function() {
+          if ($(window).width() > 719) {
+             $('.mdc-menu').hide();
+             menuBtn.text('Valikko');
+          }
+        });
+      });
       function openMenu() {
-        $('.mdc-menu').fadeToggle( 150, "linear" );
+        $('.mdc-menu').fadeToggle( 150, function() {
+          if ($(this).is(':visible')) {
+            menuBtn.text('Sulje');
+          } else {
+            menuBtn.text('Valikko');
+          }
+        });
       }
     </script>
   </body>
