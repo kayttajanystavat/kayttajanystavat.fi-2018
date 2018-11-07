@@ -270,6 +270,10 @@ figcaption {
   color: #000;
   color: rgba(0,0,0,0.87);
 }
+/* OTHER */
+.google_forms-container {
+  margin-top: 24px;
+}
 /* MEDIA RULES */
 @media only screen and (max-width: 959px) {
   .frontpage-header-column {

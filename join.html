@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/qqq8gfx.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/material-components.min.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <body class="mdc-typography">
@@ -37,11 +37,11 @@
       <main class="grid-container" data-aos="fade" data-aos-easing="ease-out" data-aos-duration="300" data-aos-delay="50">
         <section class="col-12" aria-labelledby="join-headline">
           <h3 id="join-headline" class="mdc-typography--headline3">Liity</h3>
-          <!-- <p class="mdc-typography--body1 intro-paragraph">Yhdistyksemme jäsenenä olet etuoikeutettu kuulemaan alan
+          <p class="mdc-typography--body1 intro-paragraph">Yhdistyksemme jäsenenä olet etuoikeutettu kuulemaan alan
             työpaikoista sekä tulevista tapahtumistamme ensimmäisenä. Varmista
             paikkasi ekskursioisilla ja liity heti mukaan käytettävyysintoilijoiden
-            kuumimpaan poikkitieteelliseen yhteisöön ilmaiseksi alta.</p> -->
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSen-C_S2BSp5UflfXDjYZIMNvKm-M-zcIghHOcTrc5gKcXjVw/viewform?embedded=true" width="640" height="1628" frameborder="0" marginheight="0" marginwidth="0">Ladataan...</iframe>
+            kuumimpaan poikkitieteelliseen yhteisöön ilmaiseksi alta.</p>
+            <iframe class="google_forms-container" src="https://docs.google.com/forms/d/e/1FAIpQLSen-C_S2BSp5UflfXDjYZIMNvKm-M-zcIghHOcTrc5gKcXjVw/viewform?embedded=true" width="640" height="1628" frameborder="0" marginheight="0" marginwidth="0" title="Lomake Käyttäjän ystäviin littymiseksi">Ladataan...</iframe>
         </section>
       </main>
       <footer class="main-footer grid-container">
@@ -55,8 +55,11 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://use.typekit.net/qqq8gfx.js"></script>
     <script type="text/javascript">
       AOS.init();
+
+      try{Typekit.load({ async: false });}catch(e){}
 
       var menuBtn = $('.menu-button');
 
