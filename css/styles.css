@@ -271,7 +271,21 @@ figcaption {
   color: rgba(0,0,0,0.87);
 }
 /* OTHER */
-.google_forms-container {
+.google_form_label {
+  display: block;
+  margin-top: 24px;
+}
+.google_form_checkbox-label {
+  display: block;
+}
+.google_form_input {
+  display: block;
+  width: 100%;
+}
+.google_form_checkbox {
+  margin-right: 12px;
+}
+.google_forms_button {
   margin-top: 24px;
 }
 /* MEDIA RULES */
