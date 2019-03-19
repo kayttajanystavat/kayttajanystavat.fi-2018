@@ -2,17 +2,21 @@ AddDefaultCharset utf-8
 
 RewriteEngine on
 
-# Ohjaa enkkudomain kayttajanystavat.fi:hin
+# Ohjaa enkkudomain väliaikaisesti kayttajanystavat.fi:hin
 RewriteCond %{HTTP_HOST} ^friendsoftheuser\.fi$ [NC]
-RewriteRule ^ https://kayttajanystavat.fi%{REQUEST_URI} [R=302]
+RewriteRule ^ https://kayttajanystavat.fi%{REQUEST_URI} [R=302,L]
+
+# Ohjaa muut domainit oletuksena kayttajanystavat.fi:hin
+RewriteCond %{HTTP_HOST} !^kayttajanystavat\.fi$ [NC]
+RewriteCond %{HTTP_HOST} !^xn--kyttjnystvt-l8adbeb\.fi$ [NC]
+RewriteRule ^ https://kayttajanystavat.fi%{REQUEST_URI} [R=301,L]
 
 RewriteRule ^rekisteriseloste/?$ https://docs.google.com/document/d/e/2PACX-1vT5f8e4J-AVPXAe3Pu7Ilu4onNG04G9XogyDyTn21uwxT3i9bJX0dqQ2i4JNpxWYx42ST5cziZk9WXA/pub [R=302,NC,L]
 
 # Vanhojen sivujen uudelleenohjaukset
-RewriteRule ^(etusivu|yhdistys)/?$ https://kayttajanystavat.fi/ [R=301,NC]
-RewriteRule ^yhteys/?$ https://kayttajanystavat.fi/ota-yhteytta/ [R=301,NC]
-RewriteRule ^yhdistys/arkisto - [G,L]
-RewriteRule ^hallitus\.php$ https://kayttajanystavat.fi/hallitus/ [R=301]
+RewriteRule ^(etusivu|yhdistys)/?$ / [R=301]
+RewriteRule ^yhteys/?$ /ota-yhteytta/ [R=301]
+RewriteRule ^hallitus\.php$ /hallitus/ [R=301]
 
 # Listausesto
 IndexIgnore *
