@@ -271,6 +271,10 @@ figcaption {
   color: rgba(0,0,0,0.87);
 }
 /* OTHER */
+.google_form {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
 .google_form_label {
   display: block;
   margin-top: 24px;
